@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10111b">
+  <title>MRS Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">↓</span><span>MRS <b>Downloader</b><small>Your media, your way</small></span></a>
+    <span class="status"><i></i> Media tools</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">VIDEO · AUDIO · FILES</div>
+      <h1>Download your<br><span>media your way.</span></h1>
+      <p>Check supported direct media links, view available file details, and save files you’re allowed to download.</p>
+      <div class="panel">
+        <label for="mediaUrl">Media URL</label>
+        <div class="url-row">
+          <input id="mediaUrl" type="url" placeholder="https://example.com/video.mp4" autocomplete="url">
+          <button id="checkBtn">Check link</button>
+        </div>
+        <p class="hint">Use a direct link to a media file or a source that explicitly permits downloading.</p>
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+        <div id="result" class="result hidden">
+          <div class="result-head"><span class="file-icon">▶</span><div><b id="fileName">Media file</b><small id="fileType">File information</small></div></div>
+          <div class="stats">
+            <div><small>File size</small><b id="fileSize">Unknown</b></div>
+            <div><small>Format</small><b id="fileFormat">Unknown</b></div>
+            <div><small>Quality</small><b id="fileQuality">Source provided</b></div>
+          </div>
+          <a id="downloadBtn" class="download-btn" href="#" rel="noopener">Download file <span>↓</span></a>
+          <p class="hint">The source may open the file in your browser instead of saving it. Actual size/quality are shown only when the source provides them.</p>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <article><span>▣</span><h3>Video tools</h3><p>Check direct MP4, WebM, and other supported media links.</p></article>
+      <article><span>♫</span><h3>Audio tools</h3><p>Open or save supported audio files such as MP3, WAV, and OGG.</p></article>
+      <article><span>↗</span><h3>Link details</h3><p>View content type and file size when a source makes them available.</p></article>
+    </section>
+    <section class="note">
+      <b>About platform links</b>
+      <p>YouTube, Instagram, and Facebook pages are not direct media files. This starter does not bypass platform restrictions or extract protected streams. Add official APIs or permitted provider integrations only where their terms allow it.</p>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> MRS Downloader · Use only media you have permission to save.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
